@@ -1,6 +1,9 @@
->[别再滥用不可见组件](#1)
+# 别再滥用不可见组件
 
-# <div id = "1">别再滥用不可见组件<div>
+1. [方法一](#1)
+2. [方法二](#2)
+
+## <div id = "1">方法一<div>
 
 [UWA原文](https://blog.uwa4d.com/archives/fillrate.html)
 
@@ -27,3 +30,12 @@ namespace UnityEngine.UI
 }
 ```
 
+## <div id = "1">方法二<div>
+
+```C#
+//不渲染但可以相应点击
+public class NoOverdrawImage : Graphic
+{
+    public override void Rebuild(CanvasUpdate update){}
+}   
+```

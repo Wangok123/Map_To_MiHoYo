@@ -112,7 +112,7 @@ void main()
 
 你可以看到我们在顶点着色器中声明了一个vertexColor变量作为vec4输出，并在片段着色器中声明了一个类似的vertexColor。由于它们名字相同且类型相同，片段着色器中的vertexColor就和顶点着色器中的vertexColor链接了。由于我们在顶点着色器中将颜色设置为深红色，最终的片段也是深红色的。下面的图片展示了输出结果：
 
-![输出红色三角形](../../../../../images/Mine/OpenGL/Shaders/shaders.png)
+![输出红色三角形](./../imgs/Shaders/shaders.png)
 
 # Uniform
 
@@ -152,7 +152,7 @@ glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f);
 
 因为OpenGL在其核心是一个C库，所以它不支持类型重载，在函数参数不同的时候就要为其定义新的函数；glUniform是一个典型例子。这个函数有一个特定的后缀，标识设定的uniform的类型。可能的后缀有：
 
-![设置Uniform类型](../../../../../images/Mine/OpenGL/Shaders/setUniform_type.png)
+![设置Uniform类型](./../imgs/Shaders/setUniform_type.png)
 
 现在你知道如何设置uniform变量的值了，我们可以使用它们来渲染了。如果我们打算让颜色慢慢变化，我们就要在游戏循环的每一次迭代中（所以他会逐帧改变）更新这个uniform，否则三角形就不会改变颜色。下面我们就计算greenValue然后每个渲染迭代都更新这个uniform：
 

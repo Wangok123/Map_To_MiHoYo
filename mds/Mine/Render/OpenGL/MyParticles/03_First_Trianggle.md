@@ -12,7 +12,7 @@
 
 先来看一个抽象渲染管线的过程：
 
-![管线](../../../../../images/Mine/OpenGL/First_Trianggle/pipeline.png)
+![管线](../imgs/03_First_Trianggle/pipeline.png)
 
 首先，我们以数组的形式传递3个3D坐标作为图形渲染管线的输入，用来表示一个三角形，这个数组叫做顶点数据(Vertex Data)；顶点数据是一系列顶点的集合。一个顶点(Vertex)是一个3D坐标的数据的集合。而顶点数据是用顶点属性(Vertex Attribute)表示的，它可以包含任何我们想用的数据，但是简单起见，我们还是假定每个顶点只由一个3D位置(译注1)和一些颜色值组成的吧。
 

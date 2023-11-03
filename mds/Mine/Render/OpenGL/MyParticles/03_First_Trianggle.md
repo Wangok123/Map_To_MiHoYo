@@ -22,6 +22,8 @@
 
 图元装配阶段的输出会传递给几何着色器(Geometry Shader)。几何着色器把图元形式的一系列顶点的集合作为输入，它可以通过产生新顶点构造出新的（或是其它的）图元来生成其他形状。例子中，它生成了另一个三角形。
 
+![图元类型](../imgs/03_First_Trianggle/primitives_type.jpg)
+
 几何着色器的输出会被传入光栅化阶段(Rasterization Stage)，这里它会把图元映射为最终屏幕上相应的像素，生成供片段着色器(Fragment Shader)使用的片段(Fragment)。在片段着色器运行之前会执行`裁切(Clipping)`。裁切会丢弃超出你的视图以外的所有像素，用来提升执行效率。
 
 >OpenGL中的一个片段是OpenGL渲染一个像素所需的所有数据。
@@ -378,7 +380,7 @@ glDrawElements函数从当前绑定到GL_ELEMENT_ARRAY_BUFFER目标的EBO中获�
 
 运行程序会获得下面这样的图片的结果。左侧图片看应该起来很熟悉，而右侧的则是使用线框模式(Wireframe Mode)绘制的。线框矩形可以显示出矩形的确是由两个三角形组成的。
 
-![输出结果](/images/Mine/OpenGL/First_Trianggle/hellotriangle2.png)
+![输出结果](../imgs/03_First_Trianggle/hellotriangle2.png)
 
 ## 线框模式
 

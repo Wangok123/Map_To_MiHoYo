@@ -13,6 +13,16 @@
     }
 ```
 
-# 具体服务
+# 具体服务容器
 
-## 
+## BaseGameServicesContainer
+
+单独把构造函数拉出来而已，初始化了一些默认的服务
+
+## UnityServiceContainer
+
+主要容器
+
+## PureServiceContainer
+
+不知道干嘛的
